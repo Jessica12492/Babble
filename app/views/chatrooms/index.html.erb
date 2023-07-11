@@ -1,0 +1,31 @@
+<p style="color: green"><%= notice %></p>
+<% if user_signed_in? %> 
+ <div> Welcome <%= current_user.email %> </div> 
+  <%= button_to "Sign out", destroy_user_session_path, method: :delete %> 
+<% else %>
+  <%= button_to "Sign in", new_user_session_path %> 
+<% end %>
+
+<h1>Chat-Rooms</h1>
+
+<div id="chatrooms">
+  <% @chatrooms.each do |chatroom| %>
+  <%= render chatroom%>
+  <% end %>
+</div>
+
+ 
+ <div > 
+<%= link_to "Create Chat", new_chatroom_path%>
+</div>
+
+
+
+<div>
+ <% @users.each do|user|%>
+
+    
+<%= link_to user.email, user %>
+ 
+<%end%>
+</div>
