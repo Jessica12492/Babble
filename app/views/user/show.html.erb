@@ -1,17 +1,25 @@
 
-
+<div class="container">
 
 <h1>Hi</h1>
-<%#=user.email%>
-<h3>Users</h3>
-<%#=render  @users%>
-<h4>Chatrooms</h4>
-<%#=render @chatrooms%>
-<div class="message">
-<form>
-    <label for="message">Message:</label>
-    <input type="text" id="message" placeholder="Enter your message..." />
-    <button type="submit">Send</button>
-  </form>
-  </div>
+<%=@user.email%>
+<h3>
+</div>
+ <%= turbo_stream_from @chatrooms %>
+<div id="messages">
+</div>
+
+<%#= @users.try(:email) %>
+<%#= @chatroom.name%>
+
+
+<h3>Chat room</h3>
+
+<div id="messages">
+  <%#= render  @message %>
+  <%= render partial: 'layouts/new_message_form' %>
+</div>
+
+
+
  <%= link_to "Back to chatrooms", chatrooms_path %>

@@ -3,6 +3,7 @@ class ChatroomsController < ApplicationController
   before_action :authenticate_user!
   # GET /chatrooms or /chatrooms.json
   def index
+    
     @chatrooms = Chatroom.all
     @users = User.all
    
@@ -12,7 +13,9 @@ class ChatroomsController < ApplicationController
   # GET /chatrooms/1 or /chatrooms/1.json
   def show
     
-   
+    @chatroom = Chatroom.find(params[:id])
+  
+   # render  @users
  
   end
 
