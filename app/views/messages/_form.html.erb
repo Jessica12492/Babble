@@ -15,15 +15,17 @@
     <%= form.label :body, style: "display: block" %>
     <%= form.text_area :body %>
   </div>
-
+ <%#= form.hidden_field :user_id, value: current_user.id %>
+ 
   <div>
     <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
+  
+    <%= form.select :user_id, Chatroom.all.map{ |w| [w.id ] }, selected: "CHI" %>
   </div>
 
   <div>
     <%= form.label :chatroom_id, style: "display: block" %>
-    <%= form.text_field :chatroom_id %>
+    <%= form.select :chatroom_id, Chatroom.all.map{ |w| [ w.name, w.id ] }, selected: "CHI" %>
   </div>
 
   <div>

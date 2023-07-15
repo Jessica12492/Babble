@@ -1,5 +1,12 @@
 
-  <%#= render  @messages %>
+
+<div id="<%= dom_id chatroom %>">
+ <%= link_to chatroom.name,chatroom %><br>
+  <%chatroom.messages.each do |message| %>
+    
+<%= message.body%> <br><%end%>
+
+</div>
 
 
 
