@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :messages
-  post 'messages', to: 'messages#create'
+ 
+ # post 'messages', to: 'messages#create'
   
   get 'user/show'
 
@@ -19,7 +19,7 @@ Rails.application.routes.draw do
    root "chatrooms#index"
    
    resources :user
-
+   resources :messages
    
 
    

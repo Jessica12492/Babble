@@ -14,7 +14,7 @@ class ChatroomsController < ApplicationController
   def show
     
     @chatroom = Chatroom.find(params[:id])
-  
+    @messages = Message.all
    # render  @users
  
   end

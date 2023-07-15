@@ -2,8 +2,9 @@
 <div class="container">
 
 <h1>Hi</h1>
-<%=@user.email%>
-<h3>
+
+<%=@user.username%>
+
 </div>
  <%= turbo_stream_from @chatrooms %>
 <div id="messages">
@@ -16,9 +17,11 @@
 <h3>Chat room</h3>
 
 <div id="messages">
-  <%#= render  @message %>
+  <%#= render partial:  @messages %>
   <%= render partial: 'layouts/new_message_form' %>
-</div>
+
+  <%#= render message.body%>
+ 
 
 
 
