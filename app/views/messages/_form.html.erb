@@ -20,12 +20,12 @@
   <div>
     <%= form.label :user_id, style: "display: block" %>
   
-    <%= form.select :user_id, Chatroom.all.map{ |w| [w.id ] }, selected: "CHI" %>
+    <%= form.select :user_id, Chatroom.all.map{ |w| [w.id ] }%>
   </div>
 
   <div>
     <%= form.label :chatroom_id, style: "display: block" %>
-    <%= form.select :chatroom_id, Chatroom.all.map{ |w| [ w.name, w.id ] }, selected: "CHI" %>
+    <%= form.select :chatroom_id, Chatroom.all.map{ |w| [ w.name, w.id ] } %>
   </div>
 
   <div>
