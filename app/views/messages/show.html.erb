@@ -1,6 +1,9 @@
 <p style="color: green"><%= notice %></p>
-
-<%= render @message %>
+<div class="container text-center">
+  <div class="row align-items-start">
+    <div class="col">
+  
+  <%= render @message %>
 
 <div>
   <%= link_to "Edit this message", edit_message_path(@message) %> |
@@ -8,3 +11,5 @@
 
   <%= button_to "Destroy this message", @message, method: :delete %>
 </div>
+</div>
+

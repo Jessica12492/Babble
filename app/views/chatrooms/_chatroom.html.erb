@@ -1,8 +1,18 @@
-
-<div id="<%= dom_id chatroom %>">
- <%= link_to chatroom.name,chatroom %><br>
-  <%chatroom.messages.each do |message| %>
+<div class="container">
+<div class="card text-bg-outline-secondary mb-3" style="max-width: 18rem;">
+<div class="card-header"></div>
+<div class="card-body">
+<div class="text-black ">
+<%= link_to chatroom.name,chatroom %><br>
+<%chatroom.messages.each do |message|  %>
     
-<%= message.body%> <br><%end%>
-
+<%= message.body%> 
+<%=message.user.username%>
+<br>
+<%end%>
 </div>
+</div>
+</div>
+</div>
+</div>
+

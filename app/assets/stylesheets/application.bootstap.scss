@@ -1,5 +1,5 @@
-@import "bootstrap/scss/bootstrap";
-@import "bootstrap-icons/font/bootstrap-icons";
+//@import "bootstrap/scss/bootstrap";
+//@import "bootstrap-icons/font/bootstrap-icons";
 $fa-font-path: "./webfonts";
 
 @import "@fortawesome/fontawesome-free/scss/regular";
@@ -10,9 +10,9 @@ $fa-font-path: "./webfonts";
 
 
 @font-face {
-    font-family: "RetroCool";
-    src: url("/fonts/RetroCool.Regular.ttf");
- }
- h1 {
-    font-family: "RetroCool";
-  }
+  font-family: "Pinky Style";
+  src: url('Pinky Style.ttf');
+}
+h1 {
+  font-family: "Pinky Style";
+}
